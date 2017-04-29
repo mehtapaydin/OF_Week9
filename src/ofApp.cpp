@@ -102,7 +102,7 @@ void ofApp::setup(){
     
     
     //-----------------------------------------sound parameters
-    song.load("song1.mp3");
+    song.load("song4.mp3");
     while (! song.isLoaded());
     song.play();
     nBandsToGet = 302;  // up to 512
@@ -227,7 +227,7 @@ void ofApp::update(){
 
 	//Update the particles
 	for (int i=0; i<p.size(); i++) {
-        p[i].update(fftSmoothed[7]);
+        p[i].update(fftSmoothed[4]);
         
 	}
 }
@@ -258,14 +258,29 @@ void ofApp::draw(){
     
     
     // set new background based on fft "loudness" average
-    if (avgSound > 0.05)
-        ofBackground(172,138,255,alpha); //purple
-    else if (avgSound > 0.03)
-        ofBackground(102,190,49,alpha); //green
-    else if (avgSound > 0.01)
-        ofBackground(251, 74, 79,alpha); //orange
+    if (avgSound > 0.035)
+        ofBackground(255, 111, 87); //light pink
+    else if (avgSound > 0.025)
+        ofBackground(21, 20, 68); //darkblue
+    else if (avgSound > 0.015)
+        ofBackground(217,54,89); //pink
+    else if (avgSound > 0.005)
+        ofBackground(92,149,255); //lightblue
     else
-        ofBackground(0, 0, 0,alpha);
+        ofBackground(255, 255, 255,alpha);
+    
+    
+
+    // Bass drum
+    float bass = (fftSmoothed[1]*7 > 3) ? fftSmoothed[1]*7 : 3;
+    ofDrawEllipse(960, 720, bass, bass);
+    // Synthesized guitar in bridge/chorus
+    float saksafon = (fftSmoothed[7]*25> 3) ? fftSmoothed[7]*25 : 3;
+    ofDrawEllipse(980, 720, saksafon, saksafon);
+    // Drum symbol
+    float backgroundMusic = (fftSmoothed[27]*50 > 3) ? fftSmoothed[27]*50 : 3;
+    ofDrawEllipse(1000, 720, backgroundMusic, backgroundMusic);
+    
 
 //	ofSetColor( 255, 255, 255, alpha );
 	ofFill();
@@ -322,6 +337,9 @@ void Interface::addSlider( string title, float *value, float minV, float maxV ){
 }
 
 void Interface::draw(){
+    
+
+    
     for (int i=0; i<slider.size(); i++) {
         Slider &s = slider[i];
         ofRectangle r = s.rect;

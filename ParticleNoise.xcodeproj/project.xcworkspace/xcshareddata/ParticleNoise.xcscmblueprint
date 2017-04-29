@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C29A6A67678FEE2E2F9375112F4260000F222980",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C29A6A67678FEE2E2F9375112F4260000F222980" : 9223372036854775807,
+    "C78D2697CA4F76D26B9DC516769E747252785DD2" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "052A31A7-922A-4F49-9062-AF2EDEDF1782",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C29A6A67678FEE2E2F9375112F4260000F222980" : "ParticleNoise\/",
+    "C78D2697CA4F76D26B9DC516769E747252785DD2" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ParticleNoise",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ParticleNoise.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mehtapaydin\/OF_Week9.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C29A6A67678FEE2E2F9375112F4260000F222980"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mehtapaydin\/OF_Assignments.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C78D2697CA4F76D26B9DC516769E747252785DD2"
+    }
+  ]
+}
